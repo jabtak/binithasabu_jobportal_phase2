@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <title>Baker Bootstrap Template - Index</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+ 
+  <!-- =======================================================
+  * Template Name: Baker - v4.3.0
+  * Template URL: https://bootstrapmade.com/baker-free-onepage-bootstrap-theme/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          
+          <li><a class="nav-link scrollto" href="#contact"></a></li>
+        </ul>
+        
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <!-- End Hero -->
+  <header id="header" class="fixed-top header-transparent">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <h1 class="logo"><a href="index.html"></a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">My Profile</a></li>
+
+          
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header>
+  <main id="main">
+    
+
+    <section id="hero">
+      
+      <div class="container position-relative">
+
+        <h2 style="padding-left: 31cm;">Step {{ step }} of 3</h2>
+       
+       
+       
+       
+       
+        <div id="step2" *ngIf="step==1">
+        <div >
+          <h1 style="text-align: center">Upload Resume</h1> <br>
+          <br>
+          
+          <p style="color: whitesmoke; font-size: 31px;">Make Completing your job application easier by uploading you resume or CV.</p>
+          
+          
+         <br>
+         
+   
+          <div style="width: 50vw; margin: auto;margin-left: 24vw;margin-bottom: 1em;">
+            <br>
+            <img src=".../../../../assets//img//file_icons.jpg" style="width: 317px; height: 148px; opacity: 0.5; margin-left: -962px;">
+         
+          </div>
+          
+        </div>
+
+        <div *ngIf="socket === 'http'">
+      
+            
+            <div>
+              <button style="width: 300px;" class="btn btn-lg btn-success pull-right" (click)="fileSelect.click()">Select File</button><br><br>
+           </div>
+            
+            
+            
+            <h4 *ngIf="name.length > 0">Selected File: {{name}}</h4>
+              <input type="file" hidden #fileSelect name="largeFile" (change)="onFileSelect($event)" />
+          
+              <button  *ngIf="name.length > 0" style="width: 300px;" class="btn btn-lg btn-success pull-right" (click)="resumableUpload()">Upload</button>
+            <br><br>
+         
+          
+            
+              <!-- <button mat-button (click)="goToLink('https://youtu.be/R70yli6bSy4')">Video Link</button>
+              <button mat-button (click)="goToLink('https://www.youtube.com/funofheuristic')">Channel</button> -->
+         
+        </div>
+       
+        <br><br>
+        <div>
+          <form>
+            <h2>Personal Information</h2>
+            <label for="Name" style="float: left;width: 950px; font-size:larger;">First Name</label><br>
+            <input type="text" [(ngModel)]="alumni.fname" [ngModelOptions]="{standalone: true}" size="50" >
+            <br><br>
+            <label for="Name"  style="float: left;width: 950px; font-size:larger;">Last Name</label><br>
+            <input type="text" [ngModelOptions]="{standalone: true}" [(ngModel)]="alumni.lname" size="50" >
+            <br><br>
+            <label for="EMAIL ID" style="float: left;width: 967px; font-size:larger;">Email Id:</label><br>
+            <input type="text" [ngModelOptions]="{standalone: true}" [(ngModel)]="alumni.email" size="50">
+            <br><br>
+            <label for="contact" style="float: left;width: 1037px; font-size:larger;">Contact Number:</label><br>
+            <input type="text" [ngModelOptions]="{standalone: true}" [(ngModel)]="alumni.contact" size="50">
+            <br><br>
+            <label for="EMAIL ID"  style="float: left;width: 963px; font-size:larger;">State</label><br>
+            <input type="text" [ngModelOptions]="{standalone: true}" [(ngModel)]="alumni.state" size="50" >
+            <br><br>
+            <label style="float: left;width: 963px; font-size:larger;" for="fileselect" >Resume :</label><br>
+            <input type="text" [ngModelOptions]="{standalone: true}" [(ngModel)]="resumeName" size="50" >
+            </form>
+        </div>
+        <br><br><br><br><br><br>
+        <button style="width: 300px;;" class="btn btn-lg btn-success pull-right" (click)="nextStep()" type="submit"><i class="glyphicon glyphicon-ok-sign"></i> Next </button>
+                  
+       </div>
+
+    
+   
+
+    <div id="step2" *ngIf="step==2">
+        <div class="section">
+          <h1 style="text-align: center;">Profile</h1>
+          
+        </div>
+        <br>
+        <div class="card-body">
+          <form  role="form" [formGroup]="alumniForm"  class="php-email-form">
+            <div class="col-sm-3"><!--left col-->
+              
+              
+              <div class="text-center">
+                
+                <img  src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail" alt="avatar">
+                
+                <br>
+                <button (click)="showUpload()">Upload Profile picture</button>
+                <br><br><br>
+                <div *ngIf="isUpload">
+                  <div>
+                    <button style="width: 200px;" class="btn btn-lg btn-success pull-right" (click)="fileSelect.click()">Select File</button><br><br>
+                 </div>
+                  
+                  
+                  
+                  <h4 *ngIf="profileName.length"> Selected File: {{profileName}}</h4>
+                    <input type="file" hidden #fileSelect name="largeFile" (change)="onProfilePicSelect($event)" />
+                
+                    <button  *ngIf="profileName.length > 0" style="width: w00px;" class="btn btn-lg btn-success pull-right" (click)="resumableProfileUpload()">Upload</button>
+                
+                </div>
+              </div><br>
+           
+                </div>
+            <div class="row">
+            
+
+               
+              <div class="col-md-6 form-group">
+                
+                <input type="text" [(ngModel)]="alumni.fname" formControlName="fname" name="fname" class="form-control" id="fname"  placeholder="First Name" required>
+                <!-- <small class="label-align-left" *ngIf="(alumni.fname == null || alumni.fname == undefined) && submitted">*Required  </small> -->
+                
+              </div>
+             
+              <div class="col-md-6 form-group">
+                <input type="text" [(ngModel)]="alumni.lname" formControlName="lname" name="lname" class="form-control" id="lname"  placeholder="Last Name" required>
+                <!-- <small *ngIf="(alumni.lname == null || alumni.lname == undefined) && submitted" class="label-align-left">*Required  </small>
+                 -->
+              </div>
+              <br><br><br>
+              
+              <div class="col-md-6 form-group">
+                <input type="email" [(ngModel)]="alumni.email" formControlName="email" class="form-control" name="email" id="email" placeholder="Email" required>
+                <!-- <small *ngIf="!isMail && (alumni.email != null && alumni.email != undefined)" class="label-align-left"> Invalid  </small>
+                <small *ngIf="(alumni.email == null || alumni.email == undefined) && submitted" class="label-align-left">*Required  </small> -->
+                
+              </div>
+
+              <div class="col-md-6 form-group ">
+                <input type="text" [(ngModel)]="alumni.contact" name="contact" formControlName="contact" class="form-control" maxlength="10" id="contact"  placeholder="Mobile Number" required>
+                <!-- <small *ngIf="(alumni.contact == null || alumni.contact == undefined) && submitted" class="label-align-left">*Required  </small> -->
+                
+              </div>
+              
+              <br><br><br>
+              
+              <div class="col-md-6 form-group">
+                <!-- <h4>Gender</h4><input type="radio" formControlName="gender" name="gender" [(ngModel)]="alumni.gender" value="male"> Male
+                <input type="radio" name="gender"   formControlName="gender" [(ngModel)]="alumni.gender" value="female"> Female -->
+                 <select name="gender" class="form-control" [(ngModel)]="alumni.gender"  formControlName="gender"  id="gender" placeholder="Gender">
+                 <option value="null" [ngValue]="undefined" disabled>Gender</option>
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
+                </select>
+                <!-- <small *ngIf="(alumni.gender == null || alumni.gender == undefined) && submitted" class="label-align-left">*Required  </small> -->
+                
+              </div>
+
+              <div class="col-md-6 form-group">
+                <input type="date" [(ngModel)]="alumni.dob" formControlName="dob" placeholder="Date of Birth" name="dob" id="dob"  class="form-control" name="dob" >
+                <!-- <small *ngIf="(alumni.dob == null || alumni.dob == undefined) && submitted" class="label-align-left">*Required  </small> -->
+                
+              </div>
+              <br><br><br>
+              <div class="col-md-6 form-group">
+                <textarea class="form-control" [(ngModel)]="alumni.message" formControlName="message" name="message" rows="5" placeholder="Address"  required></textarea>
+                <!-- <small *ngIf="(alumni.message == null || alumni.message == undefined) && submitted" class="label-align-left">*Required  </small> -->
+                
+              </div>
+              
+              <br><br><br><br><br><br>
+              <div class="col-md-6 form-group">
+                <input type="text" [(ngModel)]="alumni.city" name="city" formControlName="city" class="form-control" id="city"  placeholder="City" required>
+                <!-- <small *ngIf="(alumni.city == null || alumni.city == undefined) && submitted" class="label-align-left">*Required  </small> -->
+                
+              </div>
+              <br><br><br>
+              <div class="col-md-6 form-group ">
+                <input type="text" [(ngModel)]="alumni.qualification" name="qualifictaion" formControlName="qualifictaion" class="form-control" id="qualifictaion"  placeholder="Qualifictaion" required>
+                <!-- <small *ngIf="(alumni.contact == null || alumni.contact == undefined) && submitted" class="label-align-left">*Required  </small> -->
+                
+              </div>
+              <br><br><br>
+              <div class="col-md-6 form-group ">
+                <input type="text"  name="skill" [(ngModel)]="alumni.skill" formControlName="skill" class="form-control" id="skills"  placeholder="Key Skills" required>
+                <!-- <small *ngIf="(alumni.contact == null || alumni.contact == undefined) && submitted" class="label-align-left">*Required  </small> -->
+                
+              </div>
+              <br><br><br>
+              <div class="col-md-6 form-group ">
+                <input type="text" [(ngModel)]="alumni.experience" name="experience" formControlName="experience" class="form-control" id="experience"  placeholder="Experience" required>
+                <!-- <small *ngIf="(alumni.contact == null || alumni.contact == undefined) && submitted" class="label-align-left">*Required  </small> -->
+                
+              </div>
+              <br><br><br>
+      
+
+            
+             
+           
+          
+            
+              
+            
+              
+            </div>
+            
+            <br><br><br><br>
+            <div class="form-group">
+              <div class="col-xs-12">
+                   <br>
+                   <button style="width: 300px;;" class="btn btn-lg btn-success pull-right" (click)="nextStep()" type="submit"><i class="glyphicon glyphicon-ok-sign"></i> Next </button>
+                   &nbsp;&nbsp;&nbsp;<button style="width: 300px;;" class="btn btn-lg btn-success pull-right" (click)="prevStep()" type="submit"><i class="glyphicon glyphicon-ok-sign"></i> Update Resume </button>
+         
+               </div>
+         </div>
+          </form>
+        </div>
+      </div>
+
+
+    <div id="step3" *ngIf="step==3"> 
+      <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<div class="container">
+<div class="row flex-lg-nowrap">
+ 
+
+  <div class="col">
+    <div class="row">
+      <div class="col mb-3">
+        <div class="card">
+          <div class="card-body">
+            <div class="e-profile">
+
+              <ul class="nav nav-tabs">
+                <li class="nav-item"><a href="" class="active nav-link">Profile</a></li>
+              </ul>
+              <div class="tab-content pt-3">
+                <div class="tab-pane active">
+                  <form class="form" novalidate="">
+                    <!-- <div class="row">
+                      <div class="col">
+                        <div class="row">
+                          <div class="col">
+                            <div class="form-group">
+                              <label>First Name</label>
+                              <input class="form-control" type="text" name="name" placeholder="John Smith" value="John Smith">
+                            </div>
+                          </div>
+                          <div class="col">
+                            <div class="form-group">
+                              <label>Last Name</label>
+                              <input class="form-control" type="text" name="username" placeholder="johnny.s" value="johnny.s">
+                            </div>
+                          </div>
+                          
+                          <div class="form-group">
+                            <label>Last Name</label>
+                            <input class="form-control" type="text" name="username" placeholder="johnny.s" value="johnny.s">
+                            
+                          </div>
+                          <div class="col">
+                          <div class="form-group">
+                            <label>Last Name</label>
+                            <input class="form-control" type="text" name="username" placeholder="johnny.s" value="johnny.s">
+                            
+                          </div>
+                        </div>
+                          
+                     
+                        </div>
+                      
+                      </div>
+                    </div> -->
+
+
+                    
+                    <div class="container">
+                      <div class="main-body">
+                      
+                            <!-- Breadcrumb -->
+                         
+                            <!-- /Breadcrumb -->
+                      
+                            <div class="row gutters-sm">
+                              <div class="col-md-4 mb-3">
+                                <div class="card">
+                                  <div class="card-body">
+                                    <div class="d-flex flex-column align-items-center text-center">
+                                      <img src="{{profileSource}}" alt="Admin" class="rounded-circle" width="150">
+                                     
+                                    </div>
+                                  </div>
+                                </div>
+                        
+                              </div>
+                              <div class="col-md-8">
+                                <div class="card mb-3">
+                                  <div class="card-body">
+                                    <div class="row">
+                                      <div class="col-sm-3">
+                                        <h6 class="mb-0" style="font-size:20px;">Full Name</h6>
+                                      </div>
+                                      <div class="col-sm-9 text-secondary">
+                                        {{alumni.fname+alumni.lname}}
+                                      </div>
+                                    </div>
+                                    <hr>
+                                    <div class="row">
+                                      <div class="col-sm-3">
+                                        <h6 class="mb-0" style="font-size:20px;">Email</h6>
+                                      </div>
+                                      <div class="col-sm-9 text-secondary">
+                                        {{alumni.email}}
+                                      </div>
+                                    </div>
+                                    <hr>
+                                    <div class="row">
+                                      <div class="col-sm-3">
+                                        <h6 class="mb-0" style="font-size:20px;">Gender</h6>
+                                      </div>
+                                      <div class="col-sm-9 text-secondary">
+                                        {{alumni.gender}}
+                                      </div>
+                                    </div>
+                                    <hr>
+                                    <div class="row">
+                                      <div class="col-sm-3">
+                                        <h6 class="mb-0" style="font-size:20px;">Date of Birth</h6>
+                                      </div>
+                                      <div class="col-sm-9 text-secondary">
+                                        {{alumni.dob}}
+                                      </div>
+                                    </div>
+                                    <hr>
+                                    <div class="row">
+                                      <div class="col-sm-3">
+                                        <h6 class="mb-0" style="font-size:20px;">Mobile</h6>
+                                      </div>
+                                      <div class="col-sm-9 text-secondary">
+                                        {{alumni.contact}}
+                                      </div>
+                                    </div>
+                                    <hr>
+                                    <div class="row">
+                                      <div class="col-sm-3">
+                                        <h6 class="mb-0" style="font-size:20px;">Address</h6>
+                                      </div>
+                                      <div class="col-sm-9 text-secondary">
+                                        {{alumni.message}}
+                                      </div>
+                                    </div>
+                                    <hr>
+                                    <div class="row">
+                                      <div class="col-sm-3">
+                                        <h6 class="mb-0" style="font-size:20px;">City</h6>
+                                      </div>
+                                      <div class="col-sm-9 text-secondary">
+                                        {{alumni.city}}
+                                      </div>
+                                    </div>
+                                    <hr>
+                                    <div class="row">
+                                      <div class="col-sm-3">
+                                        <h6 class="mb-0" style="font-size:20px;">Qualification</h6>
+                                      </div>
+                                      <div class="col-sm-9 text-secondary">
+                                        {{alumni.qualification}}
+                                      </div>
+                                    </div>
+                                    <hr>
+                                    <div class="row">
+                                      <div class="col-sm-3">
+                                        <h6 class="mb-0" style="font-size:20px;">Key Skill</h6>
+                                      </div>
+                                      <div class="col-sm-9 text-secondary">
+                                        {{alumni.skill}}
+                                      </div>
+                                    </div>
+                                    <hr>
+                                    <div class="row">
+                                      <div class="col-sm-3">
+                                        <h6 class="mb-0" style="font-size:20px;">Experience</h6>
+                                      </div>
+                                      <div class="col-sm-9 text-secondary">
+                                        {{alumni.experience}}
+                                      </div>
+                                    </div>
+                                    <hr>
+                                    <div class="row">
+                                      <div class="col-sm-3">
+                                        <h6 class="mb-0" style="font-size:20px;">Resume</h6>
+                                      </div>
+                                      <div class="col-sm-9 text-secondary">
+                                        {{ resumeName }}
+                                      </div>
+                                    </div>
+                                    <hr>
+                                    
+
+                                  </div>
+                                </div>
+                  
+                                <div class="row gutters-sm">
+                                  
+                             
+                                </div>
+                  
+                  
+                  
+                              </div>
+                            </div>
+                  
+                          </div>
+                      </div>
+
+
+
+
+
+
+
+                      
+                    
+                    <div class="row">
+                      <div class="col d-flex justify-content-end">
+                      <button class="btn btn-primary" style="width: 195px;" (click)="editProf()" type="submit">Edit</button>
+                      </div>
+                      
+                    </div>
+                  </form>
+                  <br><br><br><br><br>
+                  <div class="form-group">
+                    <div class="col-xs-12">
+                         <br>
+                         <button style="width: 300px;;" class="btn btn-lg btn-success pull-right" (click)="saveChanges()" type="submit"><i class="glyphicon glyphicon-ok-sign"></i> Save Changes </button>
+               
+                     </div>
+               </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+   
+    </div>
+
+  </div>
+</div>
+</div>
+      </div>
+      </div>
+    </section><!-- End Hero -->
+    
+                  
+    <!-- ======= Pricing Section ======= -->
+    
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <!-- <div class="container"> -->
+
+        <!-- <div class="section">
+          <h1 style="text-align: center;">SIGN UP</h1>
+          
+        </div> -->
+
+
+
+        <!-- </div> -->
+
+      <!-- </div> -->
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+  
+  <!-- ======= Footer ======= -->
+
+          <!-- All the links in the footer should remain intact. -->
+          <!-- You can delete the links only if you purchased the pro version. -->
+          <!-- Licensing information: https://bootstrapmade.com/license/ -->
+          <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/baker-free-onepage-bootstrap-theme/ -->
+      <!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  
+
+</body>
+
+</html>

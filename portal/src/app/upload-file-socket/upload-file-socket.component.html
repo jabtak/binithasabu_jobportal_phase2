@@ -1,0 +1,13 @@
+
+
+    <button mat-raised-button (click)="fileSelect.click()">Select File</button><br><br>
+    <h4 *ngIf="name.length > 0">Selected File: {{name}}</h4>
+      <input type="file" hidden #fileSelect name="largeFile" (change)="onFileSelect($event)" />
+  
+      <button mat-raised-button (click)="upload()">Upload</button>
+    <br><br>
+     
+   
+      <button mat-button (click)="goToLink('https://youtu.be/R70yli6bSy4')">Video Link</button>
+      <button mat-button (click)="goToLink('https://www.youtube.com/funofheuristic')">Channel</button>
+  
